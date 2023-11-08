@@ -78,14 +78,14 @@ void recevoirRecompense(Joueur *joueur){
 
 void combat(Joueur *heros){
     // Générez des monstres aléatoire
-    int nombreDeMonstres = rand() % 3+2;
+    int nombreDeMonstres = rand() % 2+1;
 
     struct Monstre monstres[nombreDeMonstres];
 
     // Générez aléatoirement des statistiques et un type de sprite pour chaque monstre
     for (int i = 0; i < nombreDeMonstres; i++) {
         monstres[i].vie = rand() % 100 + 50; // Vie entre 50 et 149
-        monstres[i].attaqueMin = rand() % 10 + 5; // Attaque minimale entre 5 et 14
+        monstres[i].attaqueMin = rand() % 10 + 20; // Attaque minimale entre 5 et 14
         monstres[i].attaqueMax = monstres[i].attaqueMin + rand() % 10; // Attaque maximale entre attaqueMin et attaqueMin + 9
         monstres[i].defense = rand() % 20 + 10; // Défense entre 10 et 29
 
@@ -105,10 +105,7 @@ void combat(Joueur *heros){
 
 
     while (heros->vie > 0) {
-        if (tousLesMonstresSontMorts(monstres, nombreDeMonstres)) {
-            recevoirRecompense(heros);
-            break;
-        }
+
         afficherJoueur(*heros);
 
         int attaquesRestantes = heros->attaquesParTour;
@@ -129,9 +126,9 @@ void combat(Joueur *heros){
             if(choixMonstre=='j'){
                 afficherJoueur(*heros);
             }else if(choixMonstre=='w') {
-                afficherListeArme(nbArme, &heros);
+                afficherListeArme(nbArme, heros);
             }else if(choixMonstre=='a') {
-                afficherListeArmure(nbArmure, &heros);
+                afficherListeArmure(nbArmure, heros);
             }else if (choixMonstre-48 >= 1 && choixMonstre-48 <= nombreDeMonstres) {
                 if (monstres[choixMonstre-48 - 1].vie <= 0) {
                     printf("Le monstre est mort !\n");
@@ -152,8 +149,10 @@ void combat(Joueur *heros){
             choixMonstre=' ';
 
         }
-
-
+        if (tousLesMonstresSontMorts(monstres, nombreDeMonstres)) {
+            recevoirRecompense(heros);
+            break;
+        }
         attaquerMonstres(monstres, nombreDeMonstres, heros);
 
         // Vérifiez si le joueur est mort
@@ -197,7 +196,7 @@ void combatBoss(Joueur *heros, struct Monstre boss){
                 break;
             }
 
-            printf("taper 1 pour attaquer le boss \n0 pour terminer le tour\nw pour afficher les armes possedees\na pour afficher les armures possedee\nj pour afficher les stats du joueur\n ", nombreDeMonstres);
+            printf("taper 1 pour attaquer le boss \n0 pour terminer le tour\nw pour afficher les armes possedees\na pour afficher les armures possedee\nj pour afficher les stats du joueur\n ");
             char choixMonstre;
             fflush(stdin);
             scanf("%c", &choixMonstre);
