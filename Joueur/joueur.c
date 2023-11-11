@@ -11,6 +11,7 @@ void afficherJoueur(Joueur joueur) {
     printf("Puissance Max: %d\n", joueur.attaqueMax);
     printf("La resistance de l'armure: %d\n", joueur.defense);
     printf("\n");
+    //modif
 }
 
 // Fonction pour attaquer un monstre
