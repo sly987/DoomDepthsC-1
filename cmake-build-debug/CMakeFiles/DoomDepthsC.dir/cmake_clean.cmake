@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/DoomDepthsC.dir/Joueur/joueur.c.obj.d"
   "CMakeFiles/DoomDepthsC.dir/Monstre/generation.c.obj"
   "CMakeFiles/DoomDepthsC.dir/Monstre/generation.c.obj.d"
+  "CMakeFiles/DoomDepthsC.dir/Sorts/sorts.c.obj"
+  "CMakeFiles/DoomDepthsC.dir/Sorts/sorts.c.obj.d"
   "CMakeFiles/DoomDepthsC.dir/carte/carte.c.obj"
   "CMakeFiles/DoomDepthsC.dir/carte/carte.c.obj.d"
   "CMakeFiles/DoomDepthsC.dir/combat/combat.c.obj"

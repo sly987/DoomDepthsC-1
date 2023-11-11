@@ -5,6 +5,7 @@
 #include "../Monstre/monstre.h"
 #include "../equipement/arme.h"
 #include "../equipement/armure.h"
+#include "../Sorts/sorts.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -41,8 +42,41 @@ void attaquerMonstres(struct Monstre *monstres, int nombreDeMonstres,  Joueur *j
         }
     }
 }
-void attaquerMonstre(struct Monstre *monstre, int attaque, int indiceMonstre) {
-    int degats = attaque - monstre->defense;
+void attaquerMonstre(struct Monstre *monstre, int attaque, Joueur *joueur, struct Sorts *sorts, int indiceMonstre, int choixSort) {
+    int degats;
+
+    //*****************************************AJOUT DES SORTS***************************************************************
+    if(choixSort == 1){
+        //mana -= 10;
+        //printf("Vous avez %d points de mana\n", mana);
+        choixSort = sorts->sortAttaque;
+        degats = attaque + choixSort - monstre->defense;
+
+    }
+        //else if(choixSort == 2 && mana >= 10){
+    else if(choixSort == 2){
+        //mana -= 10;
+        //printf("Vous avez %d points de mana\n", mana);
+        choixSort = sorts->sortDefense;
+        joueur->defense += choixSort;
+        printf("Vous avez %d points de defense\n", joueur->defense);
+        degats = attaque - monstre->defense;
+    }
+        //else if(choixSort == 3 && mana >= 10){
+    else if(choixSort == 3){
+        //mana -= 10;
+        //printf("Vous avez %d points de mana\n", mana);
+        choixSort = sorts->sortPV;
+        joueur->vie += choixSort;
+        printf("Vous avez %d points de vie\n", joueur->vie);
+        degats = attaque - monstre->defense;
+    }
+    else{
+        degats = attaque - monstre->defense;
+    }
+//*************************************************FIN SORTS************************************************
+
+
     if (degats > 0) {
         monstre->vie -= degats;
         printf("Le monstre %d a subi %d degats. Points de vie restants : %d\n",indiceMonstre, degats, monstre->vie);

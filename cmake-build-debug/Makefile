@@ -176,6 +176,30 @@ Monstre/generation.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoomDepthsC.dir\build.make CMakeFiles/DoomDepthsC.dir/Monstre/generation.c.s
 .PHONY : Monstre/generation.c.s
 
+Sorts/sorts.obj: Sorts/sorts.c.obj
+.PHONY : Sorts/sorts.obj
+
+# target to build an object file
+Sorts/sorts.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoomDepthsC.dir\build.make CMakeFiles/DoomDepthsC.dir/Sorts/sorts.c.obj
+.PHONY : Sorts/sorts.c.obj
+
+Sorts/sorts.i: Sorts/sorts.c.i
+.PHONY : Sorts/sorts.i
+
+# target to preprocess a source file
+Sorts/sorts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoomDepthsC.dir\build.make CMakeFiles/DoomDepthsC.dir/Sorts/sorts.c.i
+.PHONY : Sorts/sorts.c.i
+
+Sorts/sorts.s: Sorts/sorts.c.s
+.PHONY : Sorts/sorts.s
+
+# target to generate assembly for a file
+Sorts/sorts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoomDepthsC.dir\build.make CMakeFiles/DoomDepthsC.dir/Sorts/sorts.c.s
+.PHONY : Sorts/sorts.c.s
+
 carte/carte.obj: carte/carte.c.obj
 .PHONY : carte/carte.obj
 
@@ -335,6 +359,9 @@ help:
 	@echo ... Monstre/generation.obj
 	@echo ... Monstre/generation.i
 	@echo ... Monstre/generation.s
+	@echo ... Sorts/sorts.obj
+	@echo ... Sorts/sorts.i
+	@echo ... Sorts/sorts.s
 	@echo ... carte/carte.obj
 	@echo ... carte/carte.i
 	@echo ... carte/carte.s

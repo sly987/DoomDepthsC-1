@@ -91,6 +91,12 @@
 		<Unit filename="C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/Monstre/monstre.h">
 			<Option target="DoomDepthsC"/>
 		</Unit>
+		<Unit filename="C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/Sorts/sorts.c">
+			<Option target="DoomDepthsC"/>
+		</Unit>
+		<Unit filename="C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/Sorts/sorts.h">
+			<Option target="DoomDepthsC"/>
+		</Unit>
 		<Unit filename="C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/carte/carte.c">
 			<Option target="DoomDepthsC"/>
 		</Unit>

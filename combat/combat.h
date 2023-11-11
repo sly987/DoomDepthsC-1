@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include "../Joueur/joueur.h"
 #include "../Monstre/monstre.h"
+#include "../Sorts/sorts.h"
 
 extern struct Monstre BossZone1;
 extern struct Monstre BossZone2;

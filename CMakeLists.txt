@@ -22,4 +22,6 @@ add_executable(DoomDepthsC main.c
         Monstre/listeBoss.h
         sauvegarde/sauvegarde.h
         sauvegarde/sauvegarde.c
+        Sorts/sorts.h
+        Sorts/sorts.c
 )
