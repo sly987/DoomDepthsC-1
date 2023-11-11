@@ -116,6 +116,7 @@ void desequiperArmure(int *nbArmure, short * equipeArmure, Joueur *joueur){
 }
 void equiperArmure(armure armure, int *nbArmure, short * equipeArmure, Joueur *joueur){
     if(*equipeArmure==0){
+        joueur->defense+=armure.defense;
         armureEquipe = armure;
         *equipeArmure=1;
     }else{

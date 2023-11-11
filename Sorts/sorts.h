@@ -5,14 +5,15 @@
 #ifndef DOOMDEPTHSC_SORTS_H
 #define DOOMDEPTHSC_SORTS_H
 
-struct Sorts{
-    int sortAttaque;
-    int sortDefense;
-    int sortPV;
-};
 
 
-
-void afficherSorts(struct Sorts sorts);
+typedef struct{
+    char* nom;
+    char* effet;
+    int puissance;
+    int consommation;
+}sort;
+extern sort sorts[];
+void afficherSorts(sort sorts[3]);
 
 #endif //DOOMDEPTHSC_SORTS_H

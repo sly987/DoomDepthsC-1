@@ -10,6 +10,7 @@ typedef struct{
     char* id;
     char *nom;
     int defense;
+    int defenseBase;
     int rarete;
 }armure;
 void ajouterArmure(armure armure, int* nbArmure,Joueur* joueur);

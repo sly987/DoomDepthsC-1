@@ -8,12 +8,13 @@
 
 
 
-void afficherSorts(struct Sorts sorts){
+void afficherSorts(sort sorts[]){
     printf("Voici les sorts disponibles : \n");
-    printf("Sort d'attaque : %d\n", sorts.sortAttaque);
-    printf("Sort de defense : %d\n ", sorts.sortDefense);
-    printf("Sorts de vie : %d\n", sorts.sortPV);
-    printf("<< ATTENTION ! : VOUS PERDREZ 10 POINTS DE MANA POUR CHAQUE SORTS UTILSES >>\n ");
-    printf("<< MAIS POUR CHAQUE TOUR VOUS VOUS REGENEREZ DE 5 POINTS DE MANA MEME SANS LES UTILISER >>\n");
+    for(int i =0; i<3; i++){
+        printf("%d : %s\n",i, sorts[i].nom);
+        printf("%s et consomme %d mana\n", sorts[i].effet, sorts[i].consommation);
+    }
+
+    printf("<<POUR CHAQUE TOUR VOUS VOUS REGENEREZ DE 5 POINTS DE MANA MEME SANS LES UTILISER >>\n");
     printf("\n");
 }

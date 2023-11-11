@@ -136,6 +136,9 @@ void equiperArme(arme arme, int *nbArme, short * equipeArme, Joueur *joueur){
         if(choix=='y'){
             desequiperArme(nbArme, equipeArme,joueur);
             armeEquipe =arme;
+            joueur->attaqueMin+=arme.attaqueMin;
+            joueur->attaqueMax+=arme.attaqueMax;
+            joueur->attaquesParTour+=arme.nbTour;
             *nbArme-=1;
 
         }else {

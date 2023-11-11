@@ -7,6 +7,8 @@ typedef struct  {
     int attaqueMin;
     int attaqueMax;
     int defense;
+    int mana;
+    int vieMax;
 }Joueur;
 
 

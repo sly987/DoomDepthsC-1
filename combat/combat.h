@@ -21,6 +21,6 @@ int tousLesMonstresSontMorts(struct Monstre *monstres, int nombreDeMonstres);
 void recevoirRecompense(Joueur *joueur);
 void combat(Joueur* heros);
 void combatBoss(Joueur* heros, struct Monstre boss);
-
+int jeterSort(Joueur* heros, int choixSort);
 
 #endif //DOOMDEPTHSC_COMBAT_H

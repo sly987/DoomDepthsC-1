@@ -6,6 +6,7 @@
 // Fonction pour afficher les statistiques du joueur
 void afficherJoueur(Joueur joueur) {
     printf("Points de vie du joueur: %d\n", joueur.vie);
+    printf("mana du joueur : %d\n", joueur.mana);
     printf("Attaques par tour: %d\n", joueur.attaquesParTour);
     printf("Puissance Min: %d\n", joueur.attaqueMin);
     printf("Puissance Max: %d\n", joueur.attaqueMax);

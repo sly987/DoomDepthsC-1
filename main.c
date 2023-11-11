@@ -9,6 +9,8 @@
 #include "combat/combat.h"
 #include "Monstre/listeBoss.h"
 #include "sauvegarde/sauvegarde.h"
+#include "Sorts/listeSort.h"
+#include "Sorts/sorts.h"
 #include <unistd.h>
 int main() {
     srand(time(NULL));
@@ -35,35 +37,41 @@ int main() {
     armures[0] = armureR3;
     armures[1] = armureR2;
     armures[2] = armureR1;
+    sorts[0]=bouleDeFeu;
+    sorts[1]=murDeFer;
+    sorts[2]=toucherDivin;
+
     if (choix == '1') {
         // Initialiser un nouveau jeu
-        printf("Bienvenue a toi, hero\nOn vous attendez avec impatience\n");
-        sleep(2);
-        printf("Pour le bien du peuple, sauvez nous des griffes du roi demon!\n");
-        sleep(3);
-        printf("Il ne reste plus beaucoup de temps!\n");
-        sleep(2);
-        printf("Les autres heros affrontent l'armee de demons et les tiennent occuper pour l'instant\n");
-        sleep(4);
-        printf("Nous sommes a un champ du chateau du roi demon\n");
-        sleep(3);
-        printf("Pour etre le plus rapide et discret possible, je n'ai pas pris d'equipement avec moi\n");
-        sleep(5);
-        printf("Attaquer le roi demon quand vous serez pret\n");
-        sleep(2);
-        printf("Les espoirs du monde repose sur vos epaules\n");
-        sleep(2);
-        printf("signe : un malheureux\n\n");
-        sleep(1);
-        printf("vous reposez la lettre\n");
-        sleep(5);
-        system("cls");
+//        printf("Bienvenue a toi, hero\nOn vous attendez avec impatience\n");
+//        sleep(2);
+//        printf("Pour le bien du peuple, sauvez nous des griffes du roi demon!\n");
+//        sleep(3);
+//        printf("Il ne reste plus beaucoup de temps!\n");
+//        sleep(2);
+//        printf("Les autres heros affrontent l'armee de demons et les tiennent occuper pour l'instant\n");
+//        sleep(4);
+//        printf("Nous sommes a un champ du chateau du roi demon\n");
+//        sleep(3);
+//        printf("Pour etre le plus rapide et discret possible, je n'ai pas pris d'equipement avec moi\n");
+//        sleep(5);
+//        printf("Attaquer le roi demon quand vous serez pret\n");
+//        sleep(2);
+//        printf("Les espoirs du monde repose sur vos epaules\n");
+//        sleep(2);
+//        printf("signe : un malheureux\n\n");
+//        sleep(1);
+//        printf("vous reposez la lettre\n");
+//        sleep(5);
+//        system("cls");
         heros = (Joueur){
                 .vie = 100,
                 .attaquesParTour = 2,
                 .attaqueMin = 50,
                 .attaqueMax = 80,
-                .defense = 20
+                .defense = 20,
+                .mana=100,
+                .vieMax=100
         };
         changerCarte('0');
         joueurX = 2;
