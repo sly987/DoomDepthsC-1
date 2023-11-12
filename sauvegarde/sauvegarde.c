@@ -46,6 +46,57 @@ int chargerPartie(GameState *gameState) {
         return 0;
     }
 
+    if (fread(&nbArme, sizeof(int), 1, fichier) != 1) {
+        printf("Erreur de lecture du nombre d'armes.\n");
+        fclose(fichier);
+        return 0;
+    }
+
+    if (fread(&listeArme, sizeof(arme[4]), 1, fichier) != 1) {
+        printf("Erreur de lecture sur la liste des armes.\n");
+        fclose(fichier);
+        return 0;
+    }
+
+    if (fread(&armeEquipe, sizeof(arme), 1, fichier) != 1) {
+        printf("Erreur de lecture sur l'arme equipé.\n");
+        fclose(fichier);
+        return 0;
+    }
+
+    if (fread(&equipeArme, sizeof(short), 1, fichier) != 1) {
+        printf("Aucune arme équipé.\n");
+        fclose(fichier);
+        return 0;
+    }
+
+
+    if (fread(&listeArmure, sizeof(armure[4]), 1, fichier) != 1) {
+        printf("Erreur de lecture sur la liste des armures.\n");
+        fclose(fichier);
+        return 0;
+    }
+
+    if (fread(&nbArmure, sizeof(int), 1, fichier) != 1) {
+        printf("Erreur de lecture sur le nombre des armures.\n");
+        fclose(fichier);
+        return 0;
+    }
+
+    if (fread(&armureEquipe, sizeof(armure), 1, fichier) != 1) {
+        printf("Erreur de lecture sur l'armure équipé.\n");
+        fclose(fichier);
+        return 0;
+    }
+
+    if (fread(&equipeArmure, sizeof(short), 1, fichier) != 1) {
+        printf("Aucune armure équipé.\n");
+        fclose(fichier);
+        return 0;
+    }
+
+
+
     if (fread(&gameState->carte, sizeof(Map), 1, fichier) != 1) {
         printf("Erreur de lecture des données de la carte.\n");
         fclose(fichier);

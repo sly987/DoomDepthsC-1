@@ -224,6 +224,8 @@ CMakeFiles/DoomDepthsC.dir/main.c.obj: C:/Users/Utilisateur/CLionProjects/DoomDe
   C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/sauvegarde/sauvegarde.h \
   C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/Joueur/joueur.h \
   C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/carte/carte.h \
+  C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/equipement/arme.h \
+  C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/equipement/armure.h \
   C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/Sorts/listeSort.h \
   C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/Sorts/sorts.h \
   C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/Sorts/sorts.h \
@@ -253,6 +255,9 @@ CMakeFiles/DoomDepthsC.dir/sauvegarde/sauvegarde.c.obj: C:/Users/Utilisateur/CLi
   E:/CLion\ 2023.2.2/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
   E:/CLion\ 2023.2.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/Joueur/joueur.h \
+  C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/equipement/arme.h \
+  C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/Joueur/joueur.h \
+  C:/Users/Utilisateur/CLionProjects/DoomDepthsC-1/equipement/armure.h \
   E:/CLion\ 2023.2.2/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
   E:/CLion\ 2023.2.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   E:/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
