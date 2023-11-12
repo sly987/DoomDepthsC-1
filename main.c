@@ -43,27 +43,27 @@ int main() {
 
     if (choix == '1') {
         // Initialiser un nouveau jeu
-//        printf("Bienvenue a toi, hero\nOn vous attendez avec impatience\n");
-//        sleep(2);
-//        printf("Pour le bien du peuple, sauvez nous des griffes du roi demon!\n");
-//        sleep(3);
-//        printf("Il ne reste plus beaucoup de temps!\n");
-//        sleep(2);
-//        printf("Les autres heros affrontent l'armee de demons et les tiennent occuper pour l'instant\n");
-//        sleep(4);
-//        printf("Nous sommes a un champ du chateau du roi demon\n");
-//        sleep(3);
-//        printf("Pour etre le plus rapide et discret possible, je n'ai pas pris d'equipement avec moi\n");
-//        sleep(5);
-//        printf("Attaquer le roi demon quand vous serez pret\n");
-//        sleep(2);
-//        printf("Les espoirs du monde repose sur vos epaules\n");
-//        sleep(2);
-//        printf("signe : un malheureux\n\n");
-//        sleep(1);
-//        printf("vous reposez la lettre\n");
-//        sleep(5);
-//        system("cls");
+       printf("Bienvenue a toi, hero\nOn vous attendez avec impatience\n");
+        sleep(2);
+        printf("Pour le bien du peuple, sauvez nous des griffes du roi demon!\n");
+        sleep(3);
+        printf("Il ne reste plus beaucoup de temps!\n");
+        sleep(2);
+        printf("Les autres heros affrontent l'armee de demons et les tiennent occuper pour l'instant\n");
+        sleep(4);
+        printf("Nous sommes a un champ du chateau du roi demon\n");
+        sleep(3);
+        printf("Pour etre le plus rapide et discret possible, je n'ai pas pris d'equipement avec moi\n");
+        sleep(5);
+        printf("Attaquer le roi demon quand vous serez pret\n");
+        sleep(2);
+        printf("Les espoirs du monde repose sur vos epaules\n");
+        sleep(2);
+        printf("signe : un malheureux\n\n");
+        sleep(1);
+        printf("vous reposez la lettre\n");
+        sleep(5);
+        system("cls");
         heros = (Joueur){
                 .vie = 100,
                 .attaquesParTour = 2,
@@ -123,7 +123,7 @@ int main() {
             sauvegarderPartie(gameStateToSave);
             printf("Partie sauvegardée.\n");
         }else if(input =='h'){
-            printf("z pour monter d'une case\ns por descendre d'une case\nq pour aller d'une case vers la gauche\nd pour aller d'une case vers la droite\n");
+            printf("z pour monter d'une case\ns pour descendre d'une case\nq pour aller d'une case vers la gauche\nd pour aller d'une case vers la droite\n");
             printf("j pour voir les stats du joueur et l'equipement equipe\n");
             printf("w pour voir la liste des armes possede\na pour voir la liste des armures possede\n");
             printf("! pour sauvegarder\np pour quitter le jeu\n");

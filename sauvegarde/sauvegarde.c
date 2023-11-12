@@ -11,6 +11,19 @@ void sauvegarderPartie(GameState gameState) {
 
     fwrite(&gameState.heros, sizeof(Joueur), 1, fichier);
 
+
+    fwrite(&nbArme, sizeof(int), 1, fichier);
+    fwrite(&listeArme, sizeof(arme[4]), 1, fichier);
+    fwrite(&armeEquipe, sizeof(arme), 1, fichier);
+    fwrite(&equipeArme, sizeof(short), 1, fichier);
+
+    fwrite(&listeArmure, sizeof(armure[4]), 1, fichier);
+    fwrite(&nbArmure, sizeof(int), 1, fichier);
+    fwrite(&armureEquipe, sizeof(armure), 1, fichier);
+    fwrite(&equiperArmure, sizeof(short), 1, fichier);
+
+
+
     fwrite(&gameState.carte, sizeof(Map), 1, fichier);
     fwrite(&joueurX, sizeof(int), 1, fichier);
     fwrite(&joueurY, sizeof(int), 1, fichier);
