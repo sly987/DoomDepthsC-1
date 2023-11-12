@@ -83,7 +83,7 @@ int chargerPartie(GameState *gameState) {
 
 
 
-    if (fread(&gameState->armeEquipe, sizeof(armure), 1, fichier) != 1) {
+    if (fread(&gameState->armureEquipe, sizeof(armure), 1, fichier) != 1) {
         printf("Erreur de lecture sur l'armure équipé.\n");
         fclose(fichier);
         return 0;
