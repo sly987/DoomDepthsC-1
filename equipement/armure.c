@@ -97,7 +97,7 @@ void afficherDetailArmure(armure armure, int indice, Joueur *joueur){
         detruireArmure(&nbArmure, indice);
     }else if(choix=='d'){
         detruireArmure(&nbArmure, indice);
-        printf("armure detruit\n")
+        printf("armure detruit\n");
     }else{
         return;
     }
