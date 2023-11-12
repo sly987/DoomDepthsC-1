@@ -232,7 +232,6 @@ void combatBoss(Joueur *heros, struct Monstre boss){
 
     while (heros->vie > 0) {
         if (tousLesMonstresSontMorts(monstres, nombreDeMonstres)) {
-            recevoirRecompense(heros);
             break;
         }
         afficherJoueur(*heros);
@@ -243,7 +242,7 @@ void combatBoss(Joueur *heros, struct Monstre boss){
             printf("Attaques restantes ce tour : %d\n", attaquesRestantes);
 
             if (tousLesMonstresSontMorts(monstres, nombreDeMonstres)) {
-                printf("Tous les monstres sont morts !\n");
+                printf("Le boss est mort!\n");
 
                 break;
             }

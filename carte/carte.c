@@ -5,6 +5,7 @@
 #include "../Joueur/joueur.h"
 #include <string.h>
 #include "../combat/combat.h"
+#include <unistd.h>
 int joueurX ;
 int joueurY;
 Map carteActuel;
@@ -101,6 +102,11 @@ void evenementMap(Joueur * heros){
         }
     }else if(carteActuel.carte[joueurX][joueurY]==9){
         combatBoss(heros, BossFinal);
+        system("cls");
+        printf("Le roi demon est mort\nBravo\nHelas vous etes execute car le peuple a peur de vous et de votre pouvoir\n");
+        sleep(4);
+        system("cls");
+        heros->vie=0;
     }else if(carteActuel.carte[joueurX][joueurY]==5){
         int result =rand()%10;
         if(result<3){

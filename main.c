@@ -177,6 +177,8 @@ int main() {
         }
         fflush(stdout);
         if (heros.vie <= 0) {
+            printf("BAD END\n");
+
             break;
         }
     }
