@@ -206,6 +206,10 @@ void combat(Joueur *heros){
             printf("Le mur de fer a bloque les assaut, il tombe en morceau\n");
         }
 
+        heros->mana+=5;
+        if(heros->mana>heros->manaMax){
+            heros->mana=heros->manaMax;
+        }
 
         // Vérifiez si le joueur est mort
         if (heros->vie <= 0) {
@@ -297,7 +301,10 @@ void combatBoss(Joueur *heros, struct Monstre boss){
         }else{
             printf("Le mur de fer a bloque les assaut, il tombe en morceau\n");
         }
-
+        heros->mana+=5;
+        if(heros->mana>heros->manaMax){
+            heros->mana=heros->manaMax;
+        }
         // Vérifiez si le joueur est mort
         if (heros->vie <= 0) {
             printf("Le joueur est mort. Fin de la partie.\n");

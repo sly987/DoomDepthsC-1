@@ -71,7 +71,8 @@ int main() {
                 .attaqueMax = 80,
                 .defense = 20,
                 .mana=100,
-                .vieMax=100
+                .vieMax=100,
+                .manaMax=100
         };
         changerCarte('0');
         joueurX = 2;
@@ -88,7 +89,8 @@ int main() {
                     .attaqueMax = 80,
                     .defense = 20,
                     .mana=100,
-                    .vieMax=100
+                    .vieMax=100,
+                    .manaMax=100
             };
 
             changerCarte('0');

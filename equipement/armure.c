@@ -93,9 +93,11 @@ void afficherDetailArmure(armure armure, int indice, Joueur *joueur){
     }while(choix!='e'&& choix!='d' && choix!='n');
     if(choix=='e'){
         equiperArmure(armure, &nbArmure,  &equipeArmure, joueur);
+        printf("armure equipee\n");
         detruireArmure(&nbArmure, indice);
     }else if(choix=='d'){
         detruireArmure(&nbArmure, indice);
+        printf("armure detruit\n")
     }else{
         return;
     }

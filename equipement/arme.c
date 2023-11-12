@@ -52,7 +52,7 @@ void ajouterArme(arme arme, int* nbArme,Joueur *joueur){
 }
 void detruireArme(int *nbArme, int indiceArme){
     *nbArme-=1;
-    
+
     for(int i =indiceArme; i<*nbArme; i++){
         listeArme[i]=listeArme[i+1];
     }
@@ -96,9 +96,11 @@ void afficherDetailArme( arme arme, int indice, Joueur *joueur){
     }while(choix!='e'&& choix!='d' && choix!='n');
     if(choix=='e'){
         equiperArme( arme, &nbArme,  &equipeArme, joueur);
+        printf("arme equipee\n");
         detruireArme(&nbArme, indice);
     }else if(choix=='d'){
         detruireArme(&nbArme, indice);
+        printf("arme detruit\n");
     }else{
         return;
     }

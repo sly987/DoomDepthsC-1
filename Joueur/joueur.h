@@ -9,6 +9,7 @@ typedef struct  {
     int defense;
     int mana;
     int vieMax;
+    int manaMax;
 }Joueur;
 
 
