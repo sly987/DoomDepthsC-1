@@ -58,6 +58,10 @@ void detruireArmure(int *nbArmure, int indice){
 }
 
 void afficherListeArmure(int nbArmure, Joueur *joueur){
+    if(nbArmure==0){
+        printf("il n'y a pas d'armure\n\n");
+        return;
+    }
     for(int i = 0; i<nbArmure; i++) {
         printf("armure numero %d : %s\n", i, listeArmure[i].nom);
     }

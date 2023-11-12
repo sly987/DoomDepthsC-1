@@ -109,6 +109,7 @@ int main() {
     char input = ' ';
     while (input != 'p') {
         afficherMap(carteActuel);
+        printf("taper la touche h pour voir les touches\n");
         fflush(stdin);
         scanf(" %c", &input);
         if (input == '!') {
@@ -121,9 +122,24 @@ int main() {
 
             sauvegarderPartie(gameStateToSave);
             printf("Partie sauvegardée.\n");
-        } else {
+        }else if(input =='h'){
+            printf("z pour monter d'une case\ns por descendre d'une case\nq pour aller d'une case vers la gauche\nd pour aller d'une case vers la droite\n");
+            printf("j pour voir les stats du joueur et l'equipement equipe\n");
+            printf("w pour voir la liste des armes possede\na pour voir la liste des armures possede\n");
+            printf("! pour sauvegarder\np pour quitter le jeu\n");
+        }else if(input =='j'){
+            afficherJoueur(heros);
+            afficherArmeEquipe();
+            printf("\n");
+            afficherArmureEquipe();
+            printf("\n");
+        }else if(input =='w'){
+            afficherListeArme(nbArme, &heros );
+        }else if(input =='a'){
+            afficherListeArmure(nbArmure, &heros);
+        }
+        else {
             bouger(input, &heros);
-
         }
         fflush(stdout);
         if (heros.vie <= 0) {

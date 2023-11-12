@@ -60,6 +60,10 @@ void detruireArme(int *nbArme, int indiceArme){
 }
 
 void afficherListeArme( int nbArme, Joueur* joueur){
+    if(nbArme==0){
+        printf("il n'y a pas d'arme\n\n");
+        return;
+    }
     for(int i = 0; i<nbArme; i++){
         printf("arme numero %d : %s\n",i,listeArme[i].nom);
 
