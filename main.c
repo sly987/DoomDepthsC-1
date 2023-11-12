@@ -43,27 +43,27 @@ int main() {
 
     if (choix == '1') {
         // Initialiser un nouveau jeu
-       printf("Bienvenue a toi, hero\nOn vous attendez avec impatience\n");
-        sleep(2);
-        printf("Pour le bien du peuple, sauvez nous des griffes du roi demon!\n");
-        sleep(3);
-        printf("Il ne reste plus beaucoup de temps!\n");
-        sleep(2);
-        printf("Les autres heros affrontent l'armee de demons et les tiennent occuper pour l'instant\n");
-        sleep(4);
-        printf("Nous sommes a un champ du chateau du roi demon\n");
-        sleep(3);
-        printf("Pour etre le plus rapide et discret possible, je n'ai pas pris d'equipement avec moi\n");
-        sleep(5);
-        printf("Attaquer le roi demon quand vous serez pret\n");
-        sleep(2);
-        printf("Les espoirs du monde repose sur vos epaules\n");
-        sleep(2);
-        printf("signe : un malheureux\n\n");
-        sleep(1);
-        printf("vous reposez la lettre\n");
-        sleep(5);
-        system("cls");
+//       printf("Bienvenue a toi, hero\nOn vous attendez avec impatience\n");
+//        sleep(2);
+//        printf("Pour le bien du peuple, sauvez nous des griffes du roi demon!\n");
+//        sleep(3);
+//        printf("Il ne reste plus beaucoup de temps!\n");
+//        sleep(2);
+//        printf("Les autres heros affrontent l'armee de demons et les tiennent occuper pour l'instant\n");
+//        sleep(4);
+//        printf("Nous sommes a un champ du chateau du roi demon\n");
+//        sleep(3);
+//        printf("Pour etre le plus rapide et discret possible, je n'ai pas pris d'equipement avec moi\n");
+//        sleep(5);
+//        printf("Attaquer le roi demon quand vous serez pret\n");
+//        sleep(2);
+//        printf("Les espoirs du monde repose sur vos epaules\n");
+//        sleep(2);
+//        printf("signe : un malheureux\n\n");
+//        sleep(1);
+//        printf("vous reposez la lettre\n");
+//        sleep(5);
+//        system("cls");
         heros = (Joueur){
                 .vie = 100,
                 .attaquesParTour = 2,
@@ -79,10 +79,6 @@ int main() {
     } else if (choix == '2') {
         // Charger une partie sauvegardée
         GameState gameState;
-        gameState.heros = heros;
-        gameState.carte = carteActuel;
-
-
         if (chargerPartie(&gameState) == 0) {
             printf("Impossible de charger la partie. Nouvelle partie en cours.\n");
             heros = (Joueur){
@@ -90,15 +86,35 @@ int main() {
                     .attaquesParTour = 2,
                     .attaqueMin = 50,
                     .attaqueMax = 80,
-                    .defense = 20
+                    .defense = 20,
+                    .mana=100,
+                    .vieMax=100
             };
 
             changerCarte('0');
             joueurX = 2;
             joueurY = 2;
         } else {
+
             heros = gameState.heros;
             carteActuel = gameState.carte;
+
+            nbArme=gameState.nbArme;
+
+            for(int i = 0; i<nbArme; i++){
+                listeArme[i]=gameState.listeArmes[i];
+            }
+            nbArmure=gameState.nbArmure;
+            for(int i = 0; i<nbArmure; i++){
+                listeArmure[i]=gameState.listeArmures[i];
+            }
+            armeEquipe = gameState.armeEquipe;
+            equipeArme = gameState.equiperArme;
+
+            armureEquipe = gameState.armureEquipe;
+            equipeArmure = gameState.equiperArmure;
+            joueurX= gameState.joueurX;
+            joueurY=gameState.joueurY;
 
 
 
@@ -114,8 +130,26 @@ int main() {
         scanf(" %c", &input);
         if (input == '!') {
             GameState gameStateToSave;
+
             gameStateToSave.heros = heros;
+
             gameStateToSave.carte = carteActuel;
+
+            gameStateToSave.nbArme=nbArme;
+            for(int i =0; i<nbArme; i++){
+                gameStateToSave.listeArmes[i]=listeArme[i];
+            }
+            gameStateToSave.armeEquipe= armeEquipe;
+            gameStateToSave.equiperArme= equipeArme;
+
+            gameStateToSave.nbArmure=nbArmure;
+            for(int i =0; i<nbArmure; i++){
+                gameStateToSave.listeArmures[i]=listeArmure[i];
+            }
+            gameStateToSave.armureEquipe= armureEquipe;
+            gameStateToSave.equiperArmure= equipeArmure;
+            gameStateToSave.joueurX=joueurX;
+            gameStateToSave.joueurY=joueurY;
             // Remplissez gameStateToSave avec d'autres données de la partie, si nécessaire
 
 

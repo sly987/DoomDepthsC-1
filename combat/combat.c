@@ -248,7 +248,7 @@ void combatBoss(Joueur *heros, struct Monstre boss){
                 break;
             }
 
-            printf("taper 1 pour attaquer le boss \n0 pour terminer le tour\nw pour afficher les armes possedees\na pour afficher les armures possedee\nj pour afficher les stats du joueur\n ");
+            printf("taper 1 pour attaquer le boss \n0 pour terminer le tour\nw pour afficher les armes possedees\na pour afficher les armures possedee\nj pour afficher les stats du joueur\ns por lancer un sort\n ");
             char choixMonstre;
             char choixSort;
 

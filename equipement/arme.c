@@ -52,7 +52,7 @@ void ajouterArme(arme arme, int* nbArme,Joueur *joueur){
 }
 void detruireArme(int *nbArme, int indiceArme){
     *nbArme-=1;
-    printf("vous avez detruit %s ", listeArme[indiceArme].nom);
+    
     for(int i =indiceArme; i<*nbArme; i++){
         listeArme[i]=listeArme[i+1];
     }

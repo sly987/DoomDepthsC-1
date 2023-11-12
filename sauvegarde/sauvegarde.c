@@ -12,21 +12,21 @@ void sauvegarderPartie(GameState gameState) {
     fwrite(&gameState.heros, sizeof(Joueur), 1, fichier);
 
 
-    fwrite(&nbArme, sizeof(int), 1, fichier);
-    fwrite(&listeArme, sizeof(arme[4]), 1, fichier);
-    fwrite(&armeEquipe, sizeof(arme), 1, fichier);
-    fwrite(&equipeArme, sizeof(short), 1, fichier);
+    fwrite(&gameState.nbArme, sizeof(int), 1, fichier);
+    fwrite(&gameState.listeArmes, sizeof(arme[4]), 1, fichier);
+    fwrite(&gameState.armeEquipe, sizeof(arme), 1, fichier);
+    fwrite(&gameState.equiperArme, sizeof(short), 1, fichier);
 
-    fwrite(&listeArmure, sizeof(armure[4]), 1, fichier);
-    fwrite(&nbArmure, sizeof(int), 1, fichier);
-    fwrite(&armureEquipe, sizeof(armure), 1, fichier);
-    fwrite(&equiperArmure, sizeof(short), 1, fichier);
+    fwrite(&gameState.nbArmure, sizeof(int), 1, fichier);
+    fwrite(&gameState.listeArmures, sizeof(armure[4]), 1, fichier);
+    fwrite(&gameState.armureEquipe, sizeof(armure), 1, fichier);
+    fwrite(&gameState.equiperArmure, sizeof(short), 1, fichier);
 
 
 
     fwrite(&gameState.carte, sizeof(Map), 1, fichier);
-    fwrite(&joueurX, sizeof(int), 1, fichier);
-    fwrite(&joueurY, sizeof(int), 1, fichier);
+    fwrite(&gameState.joueurX, sizeof(int), 1, fichier);
+    fwrite(&gameState.joueurY, sizeof(int), 1, fichier);
 
     fclose(fichier);
 }
@@ -46,50 +46,50 @@ int chargerPartie(GameState *gameState) {
         return 0;
     }
 
-    if (fread(&nbArme, sizeof(int), 1, fichier) != 1) {
+    if (fread(&gameState->nbArme, sizeof(int), 1, fichier) != 1) {
         printf("Erreur de lecture du nombre d'armes.\n");
         fclose(fichier);
         return 0;
     }
 
-    if (fread(&listeArme, sizeof(arme[4]), 1, fichier) != 1) {
+    if (fread(&gameState->listeArmes, sizeof(arme[4]), 1, fichier) != 1) {
         printf("Erreur de lecture sur la liste des armes.\n");
         fclose(fichier);
         return 0;
     }
 
-    if (fread(&armeEquipe, sizeof(arme), 1, fichier) != 1) {
+    if (fread(&gameState->armeEquipe, sizeof(arme), 1, fichier) != 1) {
         printf("Erreur de lecture sur l'arme equipé.\n");
         fclose(fichier);
         return 0;
     }
 
-    if (fread(&equipeArme, sizeof(short), 1, fichier) != 1) {
+    if (fread(&gameState->equiperArme, sizeof(short), 1, fichier) != 1) {
         printf("Aucune arme équipé.\n");
         fclose(fichier);
         return 0;
     }
 
-
-    if (fread(&listeArmure, sizeof(armure[4]), 1, fichier) != 1) {
+    if (fread(&gameState->nbArmure, sizeof(int), 1, fichier) != 1) {
+        printf("Erreur de lecture sur le nombre des armures.\n");
+        fclose(fichier);
+        return 0;
+    }
+    if (fread(&gameState->listeArmures, sizeof(armure[4]), 1, fichier) != 1) {
         printf("Erreur de lecture sur la liste des armures.\n");
         fclose(fichier);
         return 0;
     }
 
-    if (fread(&nbArmure, sizeof(int), 1, fichier) != 1) {
-        printf("Erreur de lecture sur le nombre des armures.\n");
-        fclose(fichier);
-        return 0;
-    }
 
-    if (fread(&armureEquipe, sizeof(armure), 1, fichier) != 1) {
+
+    if (fread(&gameState->armeEquipe, sizeof(armure), 1, fichier) != 1) {
         printf("Erreur de lecture sur l'armure équipé.\n");
         fclose(fichier);
         return 0;
     }
 
-    if (fread(&equipeArmure, sizeof(short), 1, fichier) != 1) {
+    if (fread(&gameState->equiperArmure, sizeof(short), 1, fichier) != 1) {
         printf("Aucune armure équipé.\n");
         fclose(fichier);
         return 0;
@@ -103,8 +103,8 @@ int chargerPartie(GameState *gameState) {
         return 0;
     }
 
-    if (fread(&joueurX, sizeof(int), 1, fichier) != 1 ||
-        fread(&joueurY, sizeof(int), 1, fichier) != 1) {
+    if (fread(&gameState->joueurX, sizeof(int), 1, fichier) != 1
+    ||fread(&gameState->joueurY, sizeof(int), 1, fichier) != 1) {
         printf("Erreur de lecture de la position du joueur.\n");
         fclose(fichier);
         return 0;  // Échec de chargement

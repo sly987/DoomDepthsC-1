@@ -8,8 +8,17 @@
 
 typedef struct {
     Joueur heros;
-    //armure armure1;
-    //arme arme1;
+
+    armure listeArmures[4];
+    int nbArmure;
+    armure armureEquipe;
+    short equiperArmure;
+
+    arme listeArmes[4];
+    int nbArme;
+    arme armeEquipe;
+    short equiperArme;
+
     Map carte;
     int joueurX;
     int joueurY;

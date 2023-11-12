@@ -1,3 +1,0 @@
-"E:\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\DoomDepthsC.dir/objects.a
-"E:\CLion 2023.2.2\bin\mingw\bin\ar.exe" qc CMakeFiles\DoomDepthsC.dir/objects.a @CMakeFiles\DoomDepthsC.dir\objects1.rsp
-"E:\CLion 2023.2.2\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\DoomDepthsC.dir/objects.a -Wl,--no-whole-archive -o DoomDepthsC.exe -Wl,--out-implib,libDoomDepthsC.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\DoomDepthsC.dir\linkLibs.rsp
